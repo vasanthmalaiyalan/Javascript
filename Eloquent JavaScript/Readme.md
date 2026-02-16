@@ -9,24 +9,29 @@ ygfds
 
 
 
-இது “What is JavaScript?” (JavaScript என்றால் என்ன) பகுதி.
+
+இது **“What is JavaScript?” (JavaScript என்றால் என்ன)** பகுதி.  
 இதன் கருத்தை எளிய தமிழில் தெளிவாக விளக்குகிறேன் 👇
 
-🌐 JavaScript என்றால் என்ன?
+----------
 
-JavaScript 1995-ல் உருவாக்கப்பட்டது.
+# 🌐 JavaScript என்றால் என்ன?
+
+**JavaScript** 1995-ல் உருவாக்கப்பட்டது.  
 நோக்கம்:
 
 👉 web page-களில் program சேர்க்க
 
-அப்போது browser:
+அப்போது browser:  
 👉 Netscape Navigator
 
 பிறகு:
 
 👉 எல்லா browser-களும் JavaScript-ஐ adopt செய்தது
 
-🖥️ JavaScript என்ன மாற்றம் செய்தது?
+----------
+
+# 🖥️ JavaScript என்ன மாற்றம் செய்தது?
 
 JavaScript காரணமாக:
 
@@ -34,21 +39,24 @@ JavaScript காரணமாக:
 
 அதாவது:
 
-button click → page reload இல்லாமல்
-
-live update
-
-dynamic content
+-   button click → page reload இல்லாமல்
+    
+-   live update
+    
+-   dynamic content
+    
 
 இப்போது website-களில்:
 
-👉 interactivity
-👉 animation
+👉 interactivity  
+👉 animation  
 👉 smart behavior
 
 எல்லாம் JS மூலம்
 
-⚠️ JavaScript ≠ Java
+----------
+
+# ⚠️ JavaScript ≠ Java
 
 முக்கியம்:
 
@@ -58,11 +66,12 @@ dynamic content
 
 ஏன் பெயர் வந்தது?
 
-Java அப்போது popular
-
-marketing காரணம்
-
-success ride செய்ய
+-   Java அப்போது popular
+    
+-   marketing காரணம்
+    
+-   success ride செய்ய
+    
 
 👉 அதனால் JavaScript
 
@@ -70,7 +79,9 @@ Author சொல்வது:
 
 👉 bad naming 😄
 
-📜 ECMAScript என்றால்?
+----------
+
+# 📜 ECMAScript என்றால்?
 
 JavaScript பல browser-களில் பயன்படுத்தப்பட்டதால்:
 
@@ -78,17 +89,19 @@ JavaScript பல browser-களில் பயன்படுத்தப்�
 
 அதற்காக:
 
-👉 ECMAScript standard உருவானது
+👉 ECMAScript standard உருவானது  
 👉 Ecma International அமைப்பு
 
 நிஜத்தில்:
 
 👉 ECMAScript = JavaScript
 
-இரண்டு பெயர்
+இரண்டு பெயர்  
 ஒரே language
 
-😅 JavaScript மீது குறைகள்
+----------
+
+# 😅 JavaScript மீது குறைகள்
 
 பலர் JavaScript பற்றி மோசமாக சொல்வார்கள்
 
@@ -98,13 +111,14 @@ Author சொல்வது:
 
 அவரது அனுபவம்:
 
-JS almost எல்லாம் accept செய்கிறது
-
-ஆனால் unexpected result தரும்
+-   JS almost எல்லாம் accept செய்கிறது
+    
+-   ஆனால் unexpected result தரும்
+    
 
 ஏன்?
 
-👉 JavaScript மிகவும் permissive
+👉 JavaScript மிகவும் permissive  
 👉 strict அல்ல
 
 Design idea:
@@ -115,38 +129,46 @@ Result:
 
 ❌ errors கண்டுபிடிக்க கடினம்
 
-👍 JS flexibility advantage
+----------
+
+# 👍 JS flexibility advantage
 
 ஆனால்:
 
 👉 இந்த freedom-க்கு benefits உண்டு
 
-rigid languages செய்ய முடியாத techniques
-
-informal style
-
-creative coding
+-   rigid languages செய்ய முடியாத techniques
+    
+-   informal style
+    
+-   creative coding
+    
 
 Author conclusion:
 
-👉 properly கற்றபின்
+👉 properly கற்றபின்  
 👉 JavaScript பிடித்தது
 
-📈 JavaScript versions history
+----------
+
+# 📈 JavaScript versions history
 
 முக்கிய versions:
 
-ES3 → 2000–2010 popular
+-   ES3 → 2000–2010 popular
+    
+-   ES4 → ambitious (cancel 2008)
+    
+-   ES5 → 2009 small update
+    
+-   ES6 → 2015 major update
+    
+-   அதன் பிறகு → yearly updates
+    
 
-ES4 → ambitious (cancel 2008)
+----------
 
-ES5 → 2009 small update
-
-ES6 → 2015 major update
-
-அதன் பிறகு → yearly updates
-
-🌍 Browser compatibility
+# 🌍 Browser compatibility
 
 JavaScript வளர்வதால்:
 
@@ -166,41 +188,49 @@ Old browser:
 
 👉 2024 JavaScript version
 
-🧩 JavaScript browser மட்டும் அல்ல
+----------
+
+# 🧩 JavaScript browser மட்டும் அல்ல
 
 JS பயன்படுத்தும் இடங்கள்:
 
-browser
-
-database (MongoDB, CouchDB)
-
-server (Node.js)
-
-desktop apps
+-   browser
+    
+-   database (MongoDB, CouchDB)
+    
+-   server (Node.js)
+    
+-   desktop apps
+    
 
 👉 universal language
 
-✅ சுருக்கம்
+----------
+
+# ✅ சுருக்கம்
 
 JavaScript:
 
-1995 web scripting language
-
-modern web-க்கு backbone
-
-Java-க்கு தொடர்பில்லை
-
-ECMAScript standard
-
-flexible but tricky
-
-தொடர்ந்து வளர்கிறது
-
-browser + server + DB எல்லாம்
+-   1995 web scripting language
+    
+-   modern web-க்கு backbone
+    
+-   Java-க்கு தொடர்பில்லை
+    
+-   ECMAScript standard
+    
+-   flexible but tricky
+    
+-   தொடர்ந்து வளர்கிறது
+    
+-   browser + server + DB எல்லாம்
+    
 
 👉 world-wide most used language
 
-=======================================xxxxxxxx==========================
+----------
+
+
 
 💾 Computer உலகில் என்ன இருக்கிறது?
 
