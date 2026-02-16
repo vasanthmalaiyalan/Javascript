@@ -1468,3 +1468,809 @@ JavaScript:
 👉 Unicode(Z)=90  
 👉 Unicode(a)=97  
 👉 90 < 97
+-----------
+
+
+# 🔗 Logical Operators (Boolean மீது வேலை செய்யும் operators)
+
+Boolean values:
+
+`true  false` 
+
+இந்த values மீது reasoning செய்ய logical operators பயன்படும்.
+
+JavaScript ல் 3 logical operators:
+
+-   `&&` → AND
+    
+-   `||` → OR
+    
+-   `!` → NOT
+    
+
+----------
+
+# ✔️ AND operator (&&)
+
+இரண்டு values இரண்டும் true இருந்தால் மட்டும் true.
+
+`console.log(true && false)` 
+
+Output:
+
+`false` 
+
+`console.log(true && true)` 
+
+Output:
+
+`true` 
+
+Rule:
+
+`true && true → true  true && false → false  false && true → false  false && false → false` 
+
+----------
+
+# ✔️ OR operator (||)
+
+ஒரு value true இருந்தாலே true.
+
+`console.log(false || true)` 
+
+Output:
+
+`true` 
+
+`console.log(false || false)` 
+
+Output:
+
+`false` 
+
+Rule:
+
+`true || true → true  true || false → true  false || true → true  false || false → false` 
+
+----------
+
+# 🔄 NOT operator (!)
+
+Unary operator (ஒரு value மட்டும்)
+
+Value ஐ flip செய்யும்:
+
+`console.log(!true)` 
+
+Output:
+
+`false` 
+
+`console.log(!false)` 
+
+Output:
+
+`true` 
+
+----------
+
+# ⚙️ Operator precedence (order)
+
+Logical + comparison + arithmetic mix ஆகும்போது order முக்கியம்.
+
+JavaScript order (low → high):
+
+||
+&&
+comparison (>, <, ==)
+arithmetic (+, *)
+
+----------
+
+# 🧾 Example explained
+
+`1 + 1 == 2 && 10 * 10 > 50` 
+
+Step:
+
+1️⃣ `1 + 1` → 2  
+2️⃣ `2 == 2` → true  
+3️⃣ `10 * 10` → 100  
+4️⃣ `100 > 50` → true  
+5️⃣ `true && true` → true
+
+Result:
+
+`true` 
+
+----------
+
+# ❓ Ternary operator (?:)
+
+இது logical family ல் special operator  
+3 values பயன்படுத்தும்.
+
+Syntax:
+
+`condition ? value_if_true : value_if_false` 
+
+----------
+
+# 🧾 Examples
+
+`console.log(true ? 1 : 2)` 
+
+Output:
+
+`1` 
+
+`console.log(false ? 1 : 2)` 
+
+Output:
+
+`2` 
+
+Rule:
+
+`a ? b : c` 
+
+👉 a true → b  
+👉 a false → c
+
+----------
+
+# 🎯 Real-world style example
+
+`let age = 18  let status = age >= 18 ? "adult" : "minor"` 
+
+----------
+
+# ✅ Final summary
+
+-   `&&` → AND
+    
+-   `||` → OR
+    
+-   `!` → NOT
+    
+-   precedence: `||` < `&&` < comparison < arithmetic
+    
+-   `?:` → conditional (ternary)
+-----------
+
+
+# 🕳️ Empty Values (மதிப்பு இல்லாததை குறிக்கும் values)
+
+JavaScript ல் இரண்டு special values இருக்கின்றன:
+
+`null  undefined` 
+
+இவை இரண்டும்:
+
+👉 meaningful value இல்லை  
+👉 “value இல்லை” என்பதை காட்டும்
+
+----------
+
+# ❓ undefined என்றால் என்ன?
+
+👉 value assign செய்யப்படவில்லை  
+👉 default empty
+
+Example:
+
+`let x console.log(x)` 
+
+Output:
+
+`undefined` 
+
+ஏன்?
+
+👉 x க்கு value கொடுக்கவில்லை
+
+----------
+
+# ❓ null என்றால் என்ன?
+
+👉 intentionally empty  
+👉 programmer சொல்கிறார்: “இங்கு value இல்லை”
+
+Example:
+
+`let user = null` 
+
+Meaning:
+
+👉 user = no value (deliberate)
+
+----------
+
+# ⚖️ undefined vs null
+
+
+| undefined     | null                  |
+| ------------- | --------------------- |
+| default empty | intentional empty     |
+| JS கொடுக்கும் | programmer கொடுக்கும் |
+
+
+----------
+
+# 🧾 Book point explained
+
+சில operations meaningful result தராது.
+
+அப்போ JS என்ன செய்யும்?
+
+👉 ஏதாவது value return செய்ய வேண்டும்  
+👉 அதனால் undefined வரும்
+
+Example:
+
+`console.log()` 
+
+Result:
+
+`undefined` 
+
+----------
+
+# 🤝 Practical truth
+
+JavaScript design காரணமாக:
+
+👉 null & undefined வேறுபாடு inconsistent  
+👉 பல நேரம் interchangeable
+
+Book recommendation:
+
+👉 இரண்டையும் “empty” போல treat செய்யலாம்
+
+----------
+
+# ⚠️ Equality behavior
+
+null == undefined  // true  
+null === undefined  // false
+
+👉 loose equal → same  
+👉 strict equal → different
+
+----------
+
+# 🧠 Simple intuition
+
+-   undefined = இன்னும் value இல்லை
+    
+-   null = value இல்லை என்று தீர்மானித்தோம்
+    
+
+----------
+
+# ✅ Final summary
+
+-   null & undefined = empty values
+    
+-   undefined = not assigned
+    
+-   null = intentionally empty
+# 🔄 Automatic Type Conversion (Type Coercion)
+
+JavaScript ல் ஒரு operator க்கு தவறான type கொடுத்தாலும்  
+JS error கொடுக்காமல் 👉 type convert செய்து கணக்கிடும்.
+
+இதையே:
+
+**type coercion** (automatic conversion) சொல்வார்கள்.
+
+----------
+
+# 🧾 Book examples explained
+
+## 1️⃣ null → 0 ஆகும்
+
+`console.log(8 * null)` 
+
+Result:
+
+`0` 
+
+ஏன்?
+
+👉 null → number context  
+👉 null → 0
+
+`8 * 0 = 0` 
+
+----------
+
+## 2️⃣ string → number ஆகும் (− operator)
+
+`console.log("5" - 1)` 
+
+Result:
+
+`4` 
+
+ஏன்?
+
+👉 `-` numeric operator  
+👉 "5" → 5
+
+`5 - 1 = 4` 
+
+----------
+
+## 3️⃣ + operator special case
+
+`console.log("5" + 1)` 
+
+Result:
+
+`51` 
+
+ஏன்?
+
+👉 `+` string concatenate prefer  
+👉 1 → "1"
+
+`"5" + "1" = "51"` 
+
+----------
+
+## 4️⃣ non-numeric string → NaN
+
+`console.log("five" * 2)` 
+
+Result:
+
+`NaN` 
+
+ஏன்?
+
+👉 "five" → number ஆக முடியாது
+
+----------
+
+## 5️⃣ Boolean → number
+
+`console.log(false == 0)` 
+
+Result:
+
+`true` 
+
+ஏன்?
+
+👉 false → 0
+
+`0 == 0 → true` 
+
+----------
+
+# ⚠️ NaN propagation
+
+NaN வந்தால் → தொடர்ந்து NaN
+
+NaN + 5  // NaN  
+NaN * 10  // NaN
+
+👉 unexpected NaN வந்தால்  
+👉 accidental conversion தேடு
+
+----------
+
+# ⚖️ == comparison rules
+
+Same type:
+
+`5 == 5  // true` 
+
+Different type:
+
+👉 JS convert செய்து compare
+
+----------
+
+# 🧩 null & undefined special rule
+
+null == undefined  // true  
+null == 0  // false
+
+Rule:
+
+👉 null & undefined  
+👉 only equal to each other
+
+----------
+
+# ✅ Useful pattern
+
+Value exists check:
+
+`if (value != null)` 
+
+👉 null அல்ல  
+👉 undefined அல்ல
+
+----------
+
+# ⚠️ false comparison trap
+
+`0 == false  // true  "" == false  // true` 
+
+ஏன்?
+
+👉 automatic conversion
+
+----------
+
+# 🛡️ Strict comparison (===)
+
+Type conversion இல்லாமல் compare.
+
+`"" === false` 
+
+Result:
+
+`false` 
+
+----------
+
+# 🔐 Operators
+
+
+| Operator | Meaning               |
+| -------- | --------------------- |
+| ==       | loose equal (convert) |
+| !=       | loose not equal       |
+| ===      | strict equal          |
+| !==      | strict not equal      |
+
+----------
+
+# ⭐ Recommendation (Book advice)
+
+👉 unexpected bugs தவிர்க்க  
+👉 `===` மற்றும் `!==` use செய்யவும்
+
+----------
+
+# ✅ Final summary
+
+-   JS automatic conversion செய்கிறது
+    
+-   -   → string prefer
+        
+-   numeric operators → number convert
+    
+-   NaN → invalid number
+    
+-   null == undefined
+    
+-   strict operators safest (`===`)
+
+    
+-   JS ல் பல நேரம் same போல behave
+---------------
+
+# "" === false,`string சிங்குள்ளே zero உள்ளது என்று அர்த்தமா?
+
+இல்லை ❌  
+`"" === false` இல் **string உள்ளே zero உள்ளது** என்று அர்த்தம் கிடையாது.
+
+நாம் இதை தெளிவாகப் பார்ப்போம் 👇
+
+----------
+
+# 🧵 `""` என்றால் என்ன?
+
+`""` 
+
+👉 empty string  
+👉 உள்ளே எந்த characterமும் இல்லை  
+👉 length = 0
+
+`"".length  // 0` 
+
+⚠️ இது `"0"` அல்ல
+
+----------
+
+# 🔢 `"0"` vs `""`
+
+"0"  // string with character 0 
+ ""  // empty string
+
+
+| Value | Meaning        |
+| ----- | -------------- |
+| "0"   | zero character |
+| ""    | nothing        |
+
+
+----------
+
+# ⚖️ `"" === false` ஏன் false?
+
+Strict comparison (`===`) rules:
+
+👉 type same  
+👉 value same
+
+இங்கே:
+
+-   `""` → string
+    
+-   `false` → boolean
+    
+
+Type வேறு → result false
+
+`"" === false  // false` 
+
+----------
+
+# 🤯 Confusing part (loose equality)
+
+`"" == false` 
+
+Result:
+
+`true` 
+
+ஏன்?
+
+Automatic conversion:
+
+-   `""` → 0
+    
+-   `false` → 0
+    
+
+`0 == 0 → true` 
+
+----------
+
+# 🧠 Key understanding
+
+-   `""` ≠ zero
+    
+-   `""` = empty text
+    
+-   conversion போது மட்டும் → 0
+    
+
+----------
+
+# ✅ Final clarity
+
+`"" === false`  
+👉 empty string vs boolean  
+👉 different types  
+👉 false
+
+`"" == false`  
+👉 both convert → 0  
+👉 true
+
+----------
+
+ஒரு line நினைவில் வை:
+
+👉 `""` = empty  
+👉 `"0"` = zero text  
+👉 0 = number
+
+----------
+
+இது புரிந்தால் JS coercion 80% clear 👍
+----------
+
+
+----------
+
+# ⚡ Short-circuiting என்றால் என்ன?
+
+Logical operators (`&&`, `||`)  
+👉 எப்போதும் Boolean மட்டும் return செய்யாது  
+👉 சில நேரம் original value return செய்யும்
+
+மேலும்:
+
+👉 தேவையில்லாத பகுதியை evaluate செய்யாது
+
+இதையே **short-circuit evaluation** சொல்வார்கள்.
+
+----------
+
+# 🔁 `||` (OR) behavior
+
+Rule:
+
+👉 left value truthy → left return  
+👉 left value falsy → right return
+
+## Examples
+
+`console.log(null || "user")` 
+
+Result:
+
+`user` 
+
+ஏன்?
+
+👉 null = falsy  
+👉 right return
+
+----------
+
+`console.log("Agnes" || "user")` 
+
+Result:
+
+`Agnes` 
+
+ஏன்?
+
+👉 "Agnes" = truthy  
+👉 left return
+
+----------
+
+# 🧾 Default value pattern
+
+`let name = input || "guest"` 
+
+👉 input empty → guest  
+👉 input valid → input
+
+----------
+
+# ❗ Falsy values list
+
+JS ல் false ஆக count ஆகும் values:
+
+-   false
+    
+-   0
+    
+-   "" (empty string)
+    
+-   null
+    
+-   undefined
+    
+-   NaN
+    
+
+மற்ற எல்லாம் → truthy
+
+----------
+
+# 📊 Examples
+
+0 || -1  // -1 
+ "" || "!?"  // "!?"
+
+----------
+
+# ⚠️ Problem with `||`
+
+`0 || 100` 
+
+Result:
+
+`100` 
+
+ஆனா 0 valid value தானே ❗
+
+இதற்காக `??` வந்தது.
+
+----------
+
+# 🧩 Nullish coalescing (??)
+
+Rule:
+
+👉 left null அல்லது undefined → right  
+👉 இல்லையெனில் left
+
+## Examples
+
+`console.log(0 ?? 100)` 
+
+Result:
+
+`0` 
+
+`console.log(null ?? 100)` 
+
+Result:
+
+`100` 
+
+----------
+
+# 🔁 `&&` behavior
+
+`&&` = opposite of `||`
+
+Rule:
+
+👉 left falsy → left return  
+👉 left truthy → right return
+
+## Examples
+
+`console.log(false && "hello")` 
+
+Result:
+
+`false` 
+
+`console.log(true && "hello")` 
+
+Result:
+
+`hello` 
+
+----------
+
+# ⚡ Short-circuit evaluation
+
+Important property:
+
+👉 right side only evaluate when needed
+
+## Examples
+
+`true || something()` 
+
+👉 true already  
+👉 something() run ஆகாது
+
+----------
+
+`false && something()` 
+
+👉 false already  
+👉 something() run ஆகாது
+
+----------
+
+# 🧠 Why useful?
+
+-   avoid errors
+    
+-   default values
+    
+-   conditional execution
+    
+
+----------
+
+# 🧩 Ternary also short-circuit
+
+`condition ? A : B` 
+
+👉 condition true → A மட்டும் evaluate  
+👉 false → B மட்டும் evaluate
+
+----------
+
+# ✅ Final summary
+
+-   `||` → truthy হলে left
+    
+-   `&&` → falsy হলে left
+    
+-   `??` → null/undefined only check
+    
+-   right side sometimes skip
+    
+-   இதுவே short-circu
+
+
