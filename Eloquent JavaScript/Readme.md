@@ -754,3 +754,483 @@ Example:
 👉 * / % → first  
 👉 + - → next  
 👉 doubt இருந்தால் () use
+
+-------------
+
+
+# ⚠️ Special Numbers (சிறப்பு எண்கள்) – எளிய தமிழில்
+
+JavaScript ல் **3 special numbers** இருக்கிறது.  
+இவை number type தான்…  
+ஆனா normal number மாதிரி behave செய்யாது ❗
+
+அவை:
+
+-   `Infinity`
+    
+-   `-Infinity`
+    
+-   `NaN`
+    
+
+----------
+
+# ♾️ Infinity (முடிவில்லா பெரிய எண்)
+
+`Infinity` 
+
+👉 positive infinity  
+👉 முடிவில்லா பெரிய value
+
+Example:
+
+`Infinity - 1 = Infinity` 
+
+ஏன்?
+
+👉 முடிவில்லாததிலிருந்து 1 கழித்தாலும் → இன்னும் முடிவில்லாததே
+
+----------
+
+# ♾️ -Infinity (முடிவில்லா சிறிய எண்)
+
+`-Infinity` 
+
+👉 negative infinity
+
+Example:
+
+`-Infinity + 1000 = -Infinity` 
+
+👉 முடிவில்லா negative value
+
+----------
+
+# ⚠️ Infinity calculation dangerous
+
+`Infinity - Infinity` 
+
+இதன் result?
+
+👉 meaningful இல்லை  
+👉 undefined math
+
+Result:
+
+`NaN` 
+
+----------
+
+# ❌ NaN (Not a Number)
+
+`NaN` = “Not a Number”
+
+ஆனா irony என்னனா 👉 இது number type தான் 😄
+
+Example:
+
+`0 / 0 = NaN` 
+
+ஏன்?
+
+👉 0 ஐ 0 மூலம் வகுக்க முடியாது  
+👉 math ல் undefined
+
+----------
+
+More examples:
+
+`Infinity - Infinity  NaN  Math.sqrt(-1) NaN` 
+
+----------
+
+# 🧠 Important behavior
+
+NaN மிகவும் strange 😄
+
+`NaN == NaN  false` 
+
+👉 NaN itself க்கும் equal இல்லை
+
+----------
+
+# 🧾 Simple summary
+
+Value
+
+Meaning
+
+Infinity
+
+முடிவில்லா பெரிய
+
+-Infinity
+
+முடிவில்லா சிறிய
+
+NaN
+
+meaningful number இல்லை
+
+----------
+
+# 🎯 Key mindset
+
+👉 Infinity → real math number இல்லை  
+👉 NaN → invalid result signal
+
+Programmers க்கு இது warning மாதிரி
+
+------------------
+
+
+
+# 🧵 Strings (உரை தரவு வகை)
+
+JavaScript ல் **string** என்பது text (எழுத்து / சொல் / வாக்கியம்) represent செய்யும் data type.
+
+Strings quotes உள்ளே எழுதப்படும்.
+
+## Examples
+
+``"Lie on the ocean"  'Float on the ocean'  `Down on the sea` `` 
+
+👉 `" "` double quotes  
+👉 `' '` single quotes  
+👉 `` ` ` `` backtick
+
+⚠️ Start quote = End quote same இருக்க வேண்டும்.
+
+----------
+
+# ❗ Quotes உள்ளே quotes பிரச்சனை
+
+Quotes உள்ளே quote எழுதினால் string முடிந்துவிட்டது என்று JS நினைக்கும்.
+
+Example (wrong):
+
+`"He said "hello""` 
+
+✅ Solution = escape
+
+`"He said \"hello\""` 
+
+👉 `\"` = quote inside string
+
+இதைக் **escaping** சொல்வார்கள்.
+
+----------
+
+# 🔙 Escape characters
+
+Backslash `\` special meaning தரும்.
+
+
+| Code | Meaning   |
+| ---- | --------- |
+| \n   | new line  |
+| \t   | tab       |
+| "    | quote     |
+| \    | backslash |
+
+
+----------
+
+# 🧾 Newline example
+
+`"This is the first line\nAnd this is the second"` 
+
+Result:
+
+`This is the first line
+And this  is the second` 
+
+👉 `\n` = line break
+
+----------
+
+# 🔙 Backslash itself எப்படி எழுதுவது
+
+ஒரு backslash காட்ட → இரண்டு backslash எழுத வேண்டும்.
+
+`"\\n"` 
+
+Result:
+
+`\n` 
+
+----------
+
+# 🧾 Complex example from book
+
+`"A newline character is written like \"\\n\"."` 
+
+Result:
+
+`A newline character  is written like "\n".` 
+
+----------
+
+# 🧠 String memory (Unicode)
+
+Computer உள்ளே எல்லா characters கும் number இருக்கும்.
+
+Unicode standard ஒவ்வொரு எழுத்துக்கும் code assign செய்கிறது.
+
+Example:
+
+
+| Character | Unicode    |
+| --------- | ---------- |
+| A         | 65         |
+| தமிழ் அ   | 2949       |
+| 😊        | large code |
+👉 String = numbers sequence
+
+----------
+
+# ⚠️ Emoji complication
+
+JavaScript string element = 16 bits
+
+ஆனா Unicode characters அதிகம்
+
+அதனால் சில emoji → 2 positions
+
+Example:
+
+`"😊".length` 
+
+Result:
+
+`2` 
+
+👉 1 character போல தெரிந்தாலும்  
+👉 JS க்கு 2 units
+
+----------
+
+# ➕ String concatenate
+
+Strings add ஆகாது ❌  
+Join ஆகும் ✅
+
+`"con" + "cat" + "e" + "nate"` 
+
+Result:
+
+`concatenate` 
+
+👉 + = concatenate (join)
+
+----------
+
+# 🚫 String arithmetic முடியாது
+
+`"hello" - "h"` 
+
+Meaningful இல்லை
+
+Strings divide / multiply / subtract முடியாது.
+
+----------
+
+# 🧩 Template literals (backtick strings)
+
+Backtick `` ` ` `` strings special features:
+
+✔ multiline  
+✔ value embed
+
+Example:
+
+`` `half of 100 is ${100 / 2}` `` 
+
+Result:
+
+`half of 100  is  50` 
+
+👉 `${}` உள்ளே expression evaluate ஆகும்  
+👉 string ல் சேரும்
+
+----------
+
+# 📏 Multiline string (backtick மட்டும்)
+
+`` `line1
+line2` `` 
+
+----------
+
+# 🧾 Single vs Double vs Backtick
+
+-   `' '` and `" "` almost same
+    
+-   difference = escape தேவையான quote type
+    
+
+Example:
+
+`"He said 'hi'"  'He said "hi"'` 
+
+Backtick extra features:
+
+-   multiline
+    
+-   interpolation `${}`
+    
+
+----------
+
+# ✅ Final summary
+
+-   String = text
+    
+-   Quotes: `" "` `' '` `` ` ` ``
+    
+-   `\` = escape
+    
+-   `\n` = newline
+    
+-   `+` = join
+    
+-   Unicode = character numbers
+    
+-   Emoji = 2 units
+    
+-   Backtick = template literal
+    
+-   `${}` = embed value
+
+
+--------
+# ⚙️ Unary Operators (ஒரு value மட்டும் பயன்படுத்தும் operators)
+
+இதுவரை நாம் பார்த்த operators:
+
+-   `+`
+    
+-   `-`
+    
+-   `*`
+    
+-   `/`
+    
+-   `%`
+    
+
+இவை எல்லாம் **2 values** மீது வேலை செய்தது.
+
+Example:
+
+`4 + 5` 
+
+👉 இரண்டு values  
+👉 இதை **binary operator** சொல்வார்கள்
+
+----------
+
+# 🧩 Unary operator என்றால் என்ன?
+
+👉 ஒரு value மட்டும் எடுத்துக்கொள்ளும் operator
+
+இதைக் **unary operator** சொல்வார்கள்.
+
+----------
+
+# 🧠 typeof operator
+
+JavaScript ல் ஒரு முக்கிய unary operator:
+
+`typeof` 
+
+இது value type என்ன என்று string ஆக சொல்லும்.
+
+## Examples
+
+`console.log(typeof  4.5)` 
+
+Output:
+
+`number` 
+
+`console.log(typeof  "x")` 
+
+Output:
+
+`string` 
+
+👉 typeof result எப்போதும் string தான்
+
+----------
+
+# 🖨️ console.log என்ன?
+
+`console.log(...)` 
+
+👉 console ல் output காட்டும்
+
+(அடுத்த chapter ல் detail வரும்)
+
+----------
+
+# 🔄 Minus operator – binary & unary இரண்டும்
+
+Minus `-` இரண்டு விதமாக பயன்படுத்தலாம்.
+
+## Binary minus (இரண்டு values)
+
+`10 - 2` 
+
+Result:
+
+`8` 
+
+----------
+
+## Unary minus (ஒரு value)
+
+`-8` 
+
+👉 sign மாற்றும்
+
+----------
+
+# 📌 Book example explained
+
+`console.log(-(10 - 2))` 
+
+Step by step:
+
+1️⃣ `(10 - 2)` → 8  
+2️⃣ `-8` → -8
+
+Output:
+
+`-8` 
+
+👉 இங்கே outer `-` unary operator
+
+----------
+
+# 📊 Binary vs Unary summary
+
+
+| Type   | Values | Example  |
+| ------ | ------ | -------- |
+| Binary | 2      | 10 - 2   |
+| Unary  | 1      | -8       |
+| Unary  | 1      | typeof 5 |
+
+
+----------
+
+# ✅ Final simple understanding
+
+-   Binary operator → 2 values
+    
+-   Unary operator → 1 value
+    
+-   typeof → type சொல்லும்
+    
+-   unary minus → sign மாற்றும்
