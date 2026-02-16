@@ -1234,3 +1234,237 @@ Output:
 -   typeof → type சொல்லும்
     
 -   unary minus → sign மாற்றும்
+
+-----------
+
+
+# 🔘 Boolean Values (இரண்டு நிலை மதிப்புகள்)
+
+சில விஷயங்கள் 2 நிலை மட்டும் இருக்கும்:
+
+-   yes / no
+    
+-   on / off
+    
+-   true / false
+    
+
+இதற்காக JavaScript ல் **Boolean type** உள்ளது.
+
+## Boolean values
+
+`true  false` 
+
+👉 இரண்டு மதிப்புகள் மட்டும்  
+👉 Boolean type
+
+----------
+
+# ⚖️ Comparison (ஒப்பிடுதல்)
+
+Numbers அல்லது strings compare செய்தால் → Boolean result வரும்.
+
+## Examples
+
+`console.log(3 > 2)` 
+
+Output:
+
+`true` 
+
+`console.log(3 < 2)` 
+
+Output:
+
+`false` 
+
+👉 `>` = greater than  
+👉 `<` = less than
+
+இவை binary operators (2 values)
+
+----------
+
+# 🔤 String comparison
+
+Strings கூட compare செய்யலாம்.
+
+`console.log("Aardvark" < "Zoroaster")` 
+
+Output:
+
+`true` 
+
+ஏன்?
+
+👉 alphabet order போல compare
+
+----------
+
+# ⚠️ String comparison rules
+
+JavaScript Unicode order பயன்படுத்தும்:
+
+-   uppercase < lowercase
+    
+-   symbols included
+    
+-   left → right compare
+    
+
+Example:
+
+`console.log("Z" < "a")` 
+
+Output:
+
+`true` 
+
+(uppercase Z code < lowercase a code)
+
+----------
+
+# ➕ More comparison operators
+
+
+| Operator | Meaning          |
+| -------- | ---------------- |
+| >        | greater          |
+| <        | less             |
+| >=       | greater or equal |
+| <=       | less or equal    |
+| ==       | equal            |
+| !=       | not equal        |
+
+----------
+
+# 🧾 Examples
+
+`console.log("Garnet" != "Ruby")` 
+
+Output:
+
+`true` 
+
+`console.log("Pearl" == "Amethyst")` 
+
+Output:
+
+`false` 
+
+----------
+
+# ⚠️ Special case – NaN
+
+JavaScript ல் ஒரு value மட்டும் தன்னுடன் equal இல்லை.
+
+👉 அது **NaN**
+
+`console.log(NaN == NaN)` 
+
+Output:
+
+`false` 
+
+ஏன்?
+
+👉 NaN = invalid number result  
+👉 meaningful comparison இல்லை
+
+----------
+
+# ✅ Simple summary
+
+-   Boolean = true / false
+    
+-   Comparison → Boolean result
+    
+-   Strings compare → Unicode order
+    
+-   == equal
+    
+-   != not equal
+    
+-   NaN ≠ NaN
+----------------------
+# console.log("Z" < "a") up,low எப்படி true?
+
+சூப்பர் கேள்வி 👍  
+`console.log("Z" < "a")` ஏன் **true** வருகிறது என்றால் — JavaScript **alphabet order இல்லை**, **Unicode number order** பயன்படுத்துகிறது.
+
+இதை மிக தெளிவாக பார்ப்போம் 👇
+
+----------
+
+# 🔤 Characters compare எப்படி நடக்கும்?
+
+JavaScript strings compare செய்யும் போது:
+
+👉 ஒவ்வொரு character க்கும் Unicode number இருக்கும்  
+👉 அந்த number compare செய்யப்படும்
+
+----------
+
+# 🧮 Unicode values
+
+
+| Character | Unicode |
+| --------- | ------- |
+| Z         | 90      |
+| a         | 97      |
+
+----------
+
+# ⚖️ Comparison
+
+`console.log("Z" < "a")` 
+
+அதாவது:
+
+`90 < 97` 
+
+👉 true
+
+அதனால் result:
+
+`true` 
+
+----------
+
+# ❗ Important rule
+
+Unicode order:
+
+`A–Z (65–90) a–z (97–122)` 
+
+👉 எல்லா uppercase letters  
+👉 lowercase க்கு முன் வரும்
+
+----------
+
+# 📊 Examples
+
+`console.log("A" < "a") // true  console.log("B" < "a") // true  console.log("Z" < "a") // true  console.log("a" < "b") // true` 
+
+----------
+
+# 🧠 Dictionary vs JavaScript
+
+Dictionary:
+
+`A  a  B  b ...` 
+
+JavaScript:
+
+`A  B C ... Z a  b c ...` 
+
+----------
+
+# ✅ Final understanding
+
+`"Z" < "a"` true  
+ஏன்?
+
+👉 Unicode(Z)=90  
+👉 Unicode(a)=97  
+👉 90 < 97
