@@ -10,6 +10,6 @@ ygfds
 
 # Just git run short comment : 
 
-`git config --global alias.g '!f() { git add .; git commit -m "${1:-update}" || true; git push; }; f'`
+- `git config --global alias.g '!f() { msg=${1:-"chore: sync"}; git add .; git commit -m "$msg" || true; git push; }; f'`
 
-`git g`
+- `git g "docs: js notes"`
