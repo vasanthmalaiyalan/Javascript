@@ -13,3 +13,9 @@ ygfds
 - `git config --global alias.g '!f() { msg=${1:-"chore: sync"}; git add .; git commit -m "$msg" || true; git push; }; f'`
 
 - `git g "docs: js notes"`
+
+# Node Update 
+
+`curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -`
+
+`sudo apt-get install -y nodejs`
