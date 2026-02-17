@@ -1,5 +1,5 @@
 let theNumber = Number(prompt("Pick a number: "));//why using Number func because prompt default is pick a value is string
-console.log("your number is square root of : "+ theNumber*theNumber);
+console.log("your number is square root of : "+ (theNumber*theNumber));
 
 /*
 ▶️ Control Flow என்றால் என்ன?
