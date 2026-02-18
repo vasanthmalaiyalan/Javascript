@@ -9,3 +9,23 @@ for (let n = 1; n <= 100; n++) {
         console.log(n);
     }
 }
+
+/*
+output like :
+
+1
+2
+Fizz
+4
+Bizz
+Fizz
+7
+8
+Fizz
+Bizz
+11
+Fizz
+13
+14
+FizzBizz
+*/
