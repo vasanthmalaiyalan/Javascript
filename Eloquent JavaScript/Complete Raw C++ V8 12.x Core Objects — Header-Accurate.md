@@ -220,13 +220,13 @@ JSFunction
 
 ## Ultra-Strict Truths
 
-| Fact  |Status  | 
-|---------------------|------|--------|
-| SFI has NO bytecode_array field | ✔ | |
-| SFI has NO scope_info field | ✔ | |
-| Bytecode stored via function_data | ✔ | |
-| Context is FixedArray subclass | ✔ | |
-| FeedbackVector slots = trailing array | ✔ | |
-| native_context = NativeContext only | ✔ | |
-| Code.kind stored as uint32_t | ✔ | |
-| Machine bytes live in InstructionStream | ✔ | |
+| Fact | Status |
+|------|--------|
+| SFI has NO `bytecode_array` field | ✔ |
+| SFI has NO `scope_info` field | ✔ |
+| Bytecode stored via `function_data` | ✔ |
+| Context is FixedArray subclass | ✔ |
+| FeedbackVector slots = trailing array | ✔ |
+| `native_context` = NativeContext only | ✔ |
+| `Code.kind` stored as uint32_t | ✔ |
+| Machine bytes live in InstructionStream | ✔ |
