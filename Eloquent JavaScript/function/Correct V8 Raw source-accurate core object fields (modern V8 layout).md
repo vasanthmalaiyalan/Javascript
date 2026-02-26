@@ -26,47 +26,14 @@ class JSFunction : public JSObject {
 ✔ JSObject inherit — properties, elements எல்லாம் உண்டு  
 ✔ `prototype_or_initial_map` → constructor function-ஆ இருந்தா initial map, இல்லன்னா prototype object
 
-Field
-
-Type
-
-என்ன செய்யும்
-
-`shared`
-
-Tagged
-
-Static info — bytecode, params
-
-`context`
-
-Tagged
-
-Closure scope
-
-`feedback_cell`
-
-Tagged
-
-Type profiling
-
-`code`
-
-Tagged
-
-Current tier executable
-
-`prototype_or_initial_map`
-
-Tagged
-
-`new Fn()` → initial map
-
-`raw_feedback_cell`
-
-Tagged
-
-Direct cell access
+| Field | Type | What it does |
+|-------|------|--------------|
+| `shared` | Tagged | Static info — bytecode, params |
+| `context` | Tagged | Closure scope |
+| `feedback_cell` | Tagged | Type profiling |
+| `code` | Tagged | Current tier executable |
+| `prototype_or_initial_map` | Tagged | new Fn() → initial map |
+| `raw_feedback_cell` | Tagged | Direct cell access |
 
 ----------
 
