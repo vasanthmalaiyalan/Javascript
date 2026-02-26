@@ -352,4 +352,4 @@ FixedArray
 
 ## ✅ Final Confirmation
 
-FeedbackVector.slots[] என்பது V8 inline cache-இன் persistent memory representation ஆகும்; ஒவ்வொரு slot-மும் MaybeObject pointer ஆக இருந்து UNINITIALIZED sentinel, Map pointer (monomorphic) அல்லது Map array (polymorphic) ஆகியவற்றில் ஒன்றைக் குறிக்கிறது, மேலும் JIT compiler இந்த pointer-ஐ நேரடியாக வாசித்து runtime type specialization மற்றும் guard generation (CheckMap) செய்கிறது — எனவே slots[] array தான் V8 dynamic type feedback system-இன் heap-accurate core memory structure ஆகும்.
+FeedbackVector.slots[] என்பது V8 inline cache-இன் persistent memory representation ஆகும்; ஒவ்வொரு slot-மும் MaybeObject pointer ஆக இருந்து UNINITIALIZED sentinel, Map pointer (monomorphic) அல்லது Map array (polymorphic) ஆகியவற்றில் ஒன்றைக் குறிக்கிறது, மேலும் JIT compiler இந்த pointer-ஐ நேரடியாக வாசித்து runtime type specialization மற்றும் guard generation (CheckMap) செய்கிறது — எனவே slots[] array தான் V8 dynamic type feedback system-இன் heap-accurate core memory structure ஆகும்...
