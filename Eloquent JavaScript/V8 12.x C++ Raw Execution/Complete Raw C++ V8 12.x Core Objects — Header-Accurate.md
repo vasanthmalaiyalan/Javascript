@@ -230,3 +230,5 @@ JSFunction
 | `native_context` = NativeContext only | ✔ |
 | `Code.kind` stored as uint32_t | ✔ |
 | Machine bytes live in InstructionStream | ✔ |
+
+----
